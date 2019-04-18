@@ -34,7 +34,7 @@ stages:
       runOnce:
         deploy:
           steps:
-          - script: dir $(System.ArtifactsDirectory)/drop
+          - script: dir  $(Pipeline.Workspace)
             displayName: List Artifact Contents
           - powershell: Write-Host "run your deployment steps"
             displayName: Run Deployment
