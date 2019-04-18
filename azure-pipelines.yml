@@ -37,6 +37,6 @@ stages:
             inputs:
               artifactName: 'drop'
               downloadPath: '$(System.ArtifactsDirectory)/drop'
-          - script: dir /s/b/c .
+          - script: dir $(System.ArtifactsDirectory)/drop
           - powershell: Write-Host "run your deployment steps"
 
