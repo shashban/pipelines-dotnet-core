@@ -28,7 +28,7 @@ stages:
   jobs:
   - deployment: deploy
     displayName: Deploy job
-    environment: 'myFirstEnvironment$(Build.BuildId)'
+    environment: 'myFirstEnvironment'
     strategy:
       runOnce:
         deploy:
