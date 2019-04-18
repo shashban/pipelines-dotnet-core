@@ -34,11 +34,6 @@ stages:
       runOnce:
         deploy:
           steps:
-          - task: DownloadPipelineArtifact@1
-            displayName: Download Artifacts
-            inputs:
-              artifactName: 'drop'
-              downloadPath: '$(System.ArtifactsDirectory)/drop'
           - script: dir $(System.ArtifactsDirectory)/drop
             displayName: List Artifact Contents
           - powershell: Write-Host "run your deployment steps"
